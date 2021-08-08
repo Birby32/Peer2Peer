@@ -58,11 +58,14 @@ class ChordNode:
     """
     raise NotImplemented
 
-  def delete(key):
+  def delete(self, key):
     """
     Deletes the key from the DHT if it exists, noop otherwise.
     """
-    raise NotImplemented
+    if key in self.key_table:
+      del self.key_table[key]
+      return 1
+    return 0
 
   def peers():
     """
