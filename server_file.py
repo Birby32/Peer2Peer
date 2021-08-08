@@ -41,6 +41,5 @@ class Server:
 
                 c.shutdown(socket.SHUT_RDWR)
                 c.close()
-                
 
 server = Server()
