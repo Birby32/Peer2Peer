@@ -1,14 +1,14 @@
 class ChordNode:
 
   # constructor
-  def __init__(self):
-    # each node has a key table
-    self.key_table = {}
+  def __init__(self, nodeSet):
     # each node has an ID
     # needs to be intialized to a random value
     self.nodeID = None
-    # this nodeset should come from server right?
-    self.nodeSet = []
+    # this node set should come from server right since it's
+    # just a set of all nodes connected to the server and is used
+    # to arrange all the nodes in to the actual ring logically?
+    self.nodeSet = nodeSet
     # finger table
     self.FT = {}
 
@@ -45,9 +45,9 @@ class ChordNode:
     """
     Returns all keys stored on THIS node in plain text
     """
-    print("Key Table:")
-    for key in self.key_table:
-      print(key, ":", self.key_table[key][0], self.key_table[key][1])
+    print("Keys:")
+    for key in self.FT:
+      print(key)
       print()
 
   def get(self, key):
@@ -55,8 +55,8 @@ class ChordNode:
     Returns the value for the key stored in this DHT or an empty response
     if it doesn't exist.
     """
-    if key in self.key_table:
-      return self.key_table[key]
+    if key in self.FT:
+      return self.FT[key]
     return ()
 
   def put(key):
@@ -70,20 +70,24 @@ class ChordNode:
     """
     Deletes the key from the DHT if it exists, noop otherwise.
     """
-    if key in self.key_table:
-      del self.key_table[key]
+    if key in self.FT:
+      del self.FT[key]
       return 1
     return 0
 
-  def peers():
+  def peers(self):
     """
-    Returns the names of all peers that form this DHT in plain text separated by
-    a carriage return and a new line:
-      <peer1>\r\n<peer2>\r\n
+    Returns the names of all peers that form this DHT in plain text
     """
-    raise NotImplemented
+    print("Peers of node ", self.nodeID, ":")
+    for peer in self.FT:
+        print(peer[0], peer[1])
+        print()
 
-  def join():
+
+  # do we need this since each node is automatically joined to a finger
+  # table based on the chord algorithm? 
+  def join(self, table):
     """
     Join a new DHT. If this node is already a member of a DHT, leave that
     DHT cooperatively. At least one node of the DHT that we are joining will
@@ -91,6 +95,7 @@ class ChordNode:
     HTTP request body will look like:
       <name1>:<host1>:<port1>\r\n<name2>:<host2>:<port2>...
     """
+    
     raise NotImplemented
 
   def leave():
