@@ -1,3 +1,7 @@
+'''
+Look at this https://en.m.wikipedia.org/wiki/Chord_(peer-to-peer) for more intformation about chords(a DHT protocol)
+'''
+
 def ping():
   """
   Returns when the server is ready.
