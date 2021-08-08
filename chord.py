@@ -1,10 +1,18 @@
 class ChordNode:
 
+  # constructor
   def __init__(self):
+    # each node has a key table
     self.key_table = {}
+    # each node has an ID
+    # needs to be intialized to a random value
     self.nodeID = None
+    # this nodeset should come from server right?
     self.nodeSet = []
+    # finger table
+    self.FT = {}
 
+  # from slides
   def finger(self, i):
     succ = (self.nodeID + pow(2, i-1)) % self.MAXPROC # succ(p+2ˆ(i-1))
     lwbi = self.nodeSet.index(self.nodeID) # self in nodeset
