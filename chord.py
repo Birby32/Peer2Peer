@@ -1,7 +1,7 @@
 class ChordNode:
 
   # constructor
-  def __init__(self, nodeSet):
+  def __init__(self, nodeSet, addr):
     # each node has an ID
     # needs to be intialized to a random value
     self.nodeID = None
@@ -10,7 +10,9 @@ class ChordNode:
     # to arrange all the nodes in to the actual ring logically?
     self.nodeSet = nodeSet
     # finger table
+    # key will be unique node ID and will map to a tuple containing addr and port
     self.FT = {}
+    self.addr = addr
 
   # from slides
   def finger(self, i):
@@ -59,12 +61,12 @@ class ChordNode:
       return self.FT[key]
     return ()
 
-  def put(key):
+  def put(self, node):
     """
     Upserts the key into the DHT. The value is equal to the body of the HTTP
     request.
     """
-    raise NotImplemented
+    self.FT[node.nodeID] = node.addr
 
   def delete(self, key):
     """
@@ -72,8 +74,8 @@ class ChordNode:
     """
     if key in self.FT:
       del self.FT[key]
-      return 1
-    return 0
+      return True
+    return False
 
   def peers(self):
     """
@@ -105,3 +107,6 @@ class ChordNode:
     not part of any DHT.
     """
     raise NotImplemented      
+
+c = ChordNode([], ())
+print(c.finger(1))
