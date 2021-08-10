@@ -8,10 +8,14 @@ class IPScanner:
         else:
             self.target_ip_address = ip
         self._available_devices = []
+        self._available_physical_address = []
         self.scapy_scan()
 
     def get_available_devices(self):
         return self._available_devices
+
+    def get_available_physical_address(self):
+        return self._available_physical_address
 
     def scapy_scan(self):
         # Adding /24 to the end of the target ip in order to search through
@@ -25,8 +29,9 @@ class IPScanner:
         result = srp(packet, timeout=3)[0]
 
         for sent, received in result:
-            # only storing connected ip addresses
-            self._available_devices.append(received.psrc)
+            # calls in the received packets from the result
+            self._available_devices.append(received.psrc)           # ip address
+            self._available_physical_address.append(received.hwsrc) # physical address
         
         print('Available devices in the network:')
         print('\nIP Address')
