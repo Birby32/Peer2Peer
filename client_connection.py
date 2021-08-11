@@ -5,7 +5,7 @@ SERVER = socket.gethostbyname(socket.gethostname())
 PORT = 5050
 FORMAT = 'utf-8'
 DISC_MSG = "!DISCONNECT"
-SERVER = "192.168.56.1"
+SERVER = "192.168.1.165"
 ADDRESS = (SERVER,PORT)
 client  = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
