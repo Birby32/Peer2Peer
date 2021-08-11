@@ -10,9 +10,11 @@ class Ping(IPScanner):
         self.ip_status = []
 
     def ping(self):
+        # find os build on machine
         my_os = sys.platform
         param = None
-        if my_os == 'win32':
+        # different os's use different parms for their ping execution command
+        if my_os == 'win32':    # windows
             param = '-n'
         else:
             param = '-c'
