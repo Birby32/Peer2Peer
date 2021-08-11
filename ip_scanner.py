@@ -2,7 +2,6 @@ from scapy.all import ARP, Ether, srp
 
 class IPScanner:
     def __init__(self, ip=None):
-        print(ip)
         if ip is None:
             self.target_ip_address = input('Enter the target IP Address --> ')
         else:
@@ -34,7 +33,7 @@ class IPScanner:
             self._available_physical_address.append(received.hwsrc) # physical address
         
         print('Available devices in the network:')
-        print('\nIP Address')
+        print('\nIP Addresses')
         for ip in self._available_devices:
             print(ip)
 

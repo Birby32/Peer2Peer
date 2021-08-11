@@ -17,7 +17,9 @@ class Ping(IPScanner):
         else:
             param = '-c'
 
+        # iterate through ip address list
         for ip in self.ip_list:
+            # ping with cmd command. append exit status in list
             self.ip_status.append(os.system('ping {} 1 {}'.format(param, ip)))
 
         self.print_ip_info()
