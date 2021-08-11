@@ -8,7 +8,7 @@ ip = str(ip)
 port = input("Enter port to be used: ")
 port = int(port)
 m = 10
-finger = [-1 for in range(m)]
+finger = [-1 for i in range(m)]
 
-active_server = server(ip, port, m, finger)
+active_server = server.Server(ip, port, m, finger)
 active_server.start()

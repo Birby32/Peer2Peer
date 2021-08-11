@@ -107,6 +107,3 @@ class ChordNode:
     not part of any DHT.
     """
     raise NotImplemented      
-
-c = ChordNode([], ())
-print(c.finger(1))
