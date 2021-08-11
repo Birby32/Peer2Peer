@@ -3,12 +3,15 @@ ID: 016348512
 
 Lab Experience Write Up
 
-Hi professor, as you can probably already tell from our presentation and repository,
-we don't have much and didn't come close to finishing. We did start working on it a little
-late but still with enough time to finish. Unfortunately though, our group did struggle with 
-implementing the peer to peer network and understanding the concepts behind it. Personally
-I spent longer than I expected trying to understand how the chord algorithm works and how
-it could be implemented. I did manage to get a better understanding of the concepts needed but
+Our group was not able to successfully complete the assignment. We did start working on it a little
+late but we did think that we had more than enough time to finish. Unfortunately though, our group did struggle with 
+implementing the peer to peer network and understanding the concepts behind it. We did
+attempt to try and procedurally implement each part of the project to make it easier and allow
+us to better understand the fundamental concepts. We began by simply trying to understand 
+the chord algorithm and figure out how to go about implementing it. However, trying to understand how 
+to implement the concepts turned out to be more difficult than we anticipated even with the information
+we had gathered from outside sources and from the class. Personally I spent longer than expected trying
+to understand how the chord algorithm works and how it could be implemented. I did manage to get a better understanding of the concepts needed but
 not enough to be successful in implementing it and ultimately I didn't contribute much at all to
 the project. Unfortunately there is a larger reason for why I hardly contributed which is that a 
 family member ended up in the hospital a few weeks ago and the majority of my time and energy 
