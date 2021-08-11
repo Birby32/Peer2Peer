@@ -50,14 +50,14 @@ class Server:
                 c.close()
         
 
-    # def listen(self):
-    #     self.s.listen()
-    #     print(f"Server IP {self.ip}")
-    #     while True:
-    #         con, addr = server.accept()
-    #         thread = threading.Thread(target=handle_client, args=(con,addr))
-    #         thread.start()
-    #         print(f"Current Thread Connections -> {threading.activeCount() - 1}")
+    def listen(self):
+        self.s.listen()
+        print(f"Server IP {self.ip}")
+        while True:
+            con, addr = server.accept()
+            thread = threading.Thread(target=handle_client, args=(con,addr))
+            thread.start()
+            print(f"Current Thread Connections -> {threading.activeCount() - 1}")
 
 
 print("Server is connecting ...")

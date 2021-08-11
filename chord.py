@@ -1,3 +1,4 @@
+
 class ChordNode:
 
   # constructor
@@ -35,6 +36,7 @@ class ChordNode:
       return self.FT[1] # succ. responsible
     for i in range(1, self.nBits+1): # rest of FT
       if self.inbetween(key, self.FT[i], self.FT[(i+1) % self.nBits]):
+
         return self.FT[i]
 
   def ping():
@@ -107,3 +109,5 @@ class ChordNode:
     not part of any DHT.
     """
     raise NotImplemented      
+
+    
