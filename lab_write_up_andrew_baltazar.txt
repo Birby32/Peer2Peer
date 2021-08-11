@@ -1,0 +1,20 @@
+Andrew Baltazar
+ID: 016348512
+
+Lab Experience Write Up
+
+Hi professor, as you can probably already tell from our presentation and repository,
+we don't have much and didn't come close to finishing. We did start working on it a little
+late but still with enough time to finish. Unfortunately though, our group did struggle with 
+implementing the peer to peer network and understanding the concepts behind it. Personally
+I spent longer than I expected trying to understand how the chord algorithm works and how
+it could be implemented. I did manage to get a better understanding of the concepts needed but
+not enough to be successful in implementing it and ultimately I didn't contribute much at all to
+the project. Unfortunately there is a larger reason for why I hardly contributed which is that a 
+family member ended up in the hospital a few weeks ago and the majority of my time and energy 
+was spent dealing with that and the various issues that have risen as a result of that over the last few weeks.
+Frankly, the last thing on my mind has been this project and the class. Fortunately my group has been very 
+understanding even though I didn't get into specifics with them. If you would like to grade me
+separately from them then that is fair. All in all, I definitely wish I could have put more time
+and effort into the project not only for my group and for my grade but because it is a really
+cool assignment that I think I could have benefitted from completing.
