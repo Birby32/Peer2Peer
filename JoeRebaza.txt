@@ -1,0 +1,17 @@
+Joe Rebaza
+ID: 013862145
+
+Lab Experience
+
+My experience writing up the code in this lab required a lot of additional research that I didn't expect.
+I'm not well experienced when it comes to coding for networking purposes, so this was a total shock because I
+struggled with finding the write libraries/tools to do what I needed the code to do. There was a log of debugging
+involved (expected) and a lot of reference searching in order to understand what everything does/should do. My group-mates
+were a lot of help during this lab processes as they helped me get on a clear path on what to focus on on this lab.
+Unfortunately we couldn't finish the whole thing but we did get a lot done and it was a learning experience all together.
+If there was more time I think we could've made this a lot better/cleaner that had all the required features and maybe even more.
+It was also a good learning experience working with Python as I'm not entirely comfortable with the language because of the
+simplistic syntax and wide range of libraries. It was difficult trying to find the write one for the job so I ended up
+using a good variety for the different jobs the code was required to do. I know some libraries that was used could've done
+most of the work that is required but I figured using different libraries would help me understand the different approaches for
+the same execution/result.
