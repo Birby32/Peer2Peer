@@ -1,0 +1,4 @@
+# Project Experience
+The main idea of the porject was to make a program which handled many computers on a network which woudld share files with each other without have a central server and 
+instead each node(computer) on the network would have certain files. The network should be able to handle things like desyncronization and multiple transactions happening
+in the right execution.  
